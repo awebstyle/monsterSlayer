@@ -105,6 +105,25 @@ const app = Vue.createApp({
       }
       this.attackPlayer();
     },
+
+    /** 
+     * input : data at the end of the last games
+     * output : reset data
+     * **/
+    restart(){
+      this.playerHealth = 100,
+      this.monsterHealth = 100,
+      this.currentRound = 0,
+      this.end = false,
+      this.winner = null
+    },
+
+    /**
+     * output : winner = monster 
+     **/
+    surrender(){
+      this.winner = 'monster';
+    }
   },
 });
 
